@@ -174,7 +174,12 @@ void mousePressed(){
        mouseY >= iy && mouseY <= iy+sideLength){
     
     // --------------- put you code here -------     
-
+      int col = (mouseX-ix) / SLOT_SIZE;
+      int row = (mouseY-iy) / SLOT_SIZE;
+      if (slot[col][row] == SLOT_OFF ){
+        slot[col][row] = SLOT_SAFE;
+        
+      }
     // -------------------------
     
   }
